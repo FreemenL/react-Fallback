@@ -1,0 +1,153 @@
+/**
+*  下拉刷新、滚动翻页样式
+*  SnoopyChen (ceo@vmeitime.com)
+*  2013-04-26
+*/
+
+/*------------- S 默认必须样式  -------------*/
+/**
+ *
+ * 下拉样式 Pull down styles
+ *
+ */
+.pull-down, .pull-up {
+  padding-top: 5px;
+  clear:both;
+  padding-left: 0px;
+  background:#fff;
+  height:40px;
+  line-height:40px;
+  font-weight:bold;
+  font-size:14px;
+  color:#888;
+  text-align: center;
+
+  .pull-down-label, .pull-up-label {
+    display: inline-block;
+	font-size:11px;
+    vertical-align: top;
+	line-height: 31px;
+  }
+}
+.pull-down {
+  display:none;
+  margin-top: -40px;
+  border-bottom:1px solid #ccc;
+  height: 40px;
+  padding: 5px;
+
+  &.loading, &.flip, &.show {
+    display: block;
+
+    &.loading-block {
+      margin-top: 0;
+    }
+  }
+}
+.pull-down .pull-down-icon, .pull-up .pull-up-icon  {
+  display: inline-block;
+  width:30px;
+  height:30px;
+  background:url('../images/pull-icon@2x.png') 0 0 no-repeat;
+  -webkit-background-size:40px 80px; background-size:40px 80px;
+  -webkit-transition-property:-webkit-transform;
+  -webkit-transition-duration:250ms;
+}
+.pull-down .pull-down-icon {
+  -webkit-transform:rotate(0deg) translateZ(0);
+  background-size: 29px 63px;
+  width: 29px;
+}
+.pull-up .pull-up-icon  {
+	background:url('../images/pull-up-icon.png') 0 0 no-repeat;
+    background-size: 17px;
+	background-position: 7px 2px;
+	
+}
+
+.pull-down.flip .pull-down-icon {
+  -webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+.pull-up.flip .pull-up-icon {
+  -webkit-transform:rotate(0deg) translateZ(0);
+}
+
+.pull-down, .pull-up {
+  &.no-more-data {
+    .pull-down-icon, .pull-up-icon {
+      display: none;
+    }
+  }
+  &.loading {
+    .pull-down-icon, .pull-up-icon {
+      background-position:0 100%;
+      -webkit-transform:rotate(0deg) translateZ(0);
+      -webkit-transition-duration:0ms;
+
+      -webkit-animation-name:loading;
+      -webkit-animation-duration:2s;
+      -webkit-animation-iteration-count:infinite;
+      -webkit-animation-timing-function:linear;
+	  background-image: url('../images/pull-loading.png');
+	  background-size: 25px;
+      background-position: 2px 3px;
+    }
+    .pull-down-icon{
+      background-size: 20px;
+      background-position: 5px 6px;
+    }
+  }
+}
+
+@-webkit-keyframes loading {
+  from { -webkit-transform:rotate(0deg) translateZ(0); }
+  to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+/*------------- E 默认必须样式  -------------*/
+
+
+
+/*------------- S 以下css主要是仿IOS滚动条样式(可选样式)  -------------*/
+
+.iScrollHorizontalScrollbar {
+  position: absolute;
+  z-index: 9999;
+  height: 5px;
+  left: 2px;
+  right: 2px;
+  bottom: 1px;
+  overflow: hidden;
+}
+
+.iScrollHorizontalScrollbar.iScrollBothScrollbars {
+  right: 18px;
+}
+
+.iScrollVerticalScrollbar {
+  position: absolute;
+  z-index: 9999;
+  width: 5px;
+  bottom: 2px;
+  top: 2px;
+  right: 1px;
+  overflow: hidden;
+}
+
+.iScrollVerticalScrollbar.iScrollBothScrollbars {
+  bottom: 18px;
+}
+
+.iScrollIndicator {
+  position: absolute;
+  border-radius: 8px;
+  background-color: #b3b3b3;
+}
+
+.iScrollHorizontalScrollbar .iScrollIndicator {
+  height: 100%;
+}
+
+.iScrollVerticalScrollbar .iScrollIndicator {
+  width: 100%;
+}

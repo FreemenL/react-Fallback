@@ -1,0 +1,91 @@
+/* Base Application Styles */
+body {
+  color: black;
+  background: white;
+  height:100%;
+}
+.loading_info{
+
+}
+a{
+  text-decoration: none;
+}
+ul,li{
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+h1,h2,h3,h4,h5{
+  margin: 0;
+  padding:0;
+  font-weight: normal;
+}
+img{
+  max-width: 100%;
+}
+
+.index img {
+  margin: 40px auto;
+  border-radius: 4px;
+  background: #fff;
+  display: block;
+}
+
+.index .notice {
+  margin: 20px auto;
+  padding: 15px 0;
+  text-align: center;
+  border-width: 1px 0;
+  background: #666;
+}
+.full-page{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 0px;
+  right: 0px;
+  overflow-y: scroll;
+}
+.full-page::-webkit-scrollbar {
+  display: none;
+}
+.flex{
+  display: box;
+  display: -webkit-box;
+}
+.text-hidden{
+  white-space: nowrap;
+  text-decoration: none;
+  text-overflow: ellipsis;
+}
+.text-justify {
+    text-align: justify;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+.clear{
+  clear: both;
+}
+ .full-page{
+    position: absolute;
+    left: 0px;
+
+    overflow-y: scroll;
+   }
+   .full-page::-webkit-scrollbar {
+    display: none;
+  }
+.scroll-block{
+  background-color: white;
+  margin-top: 0px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0px;
+  bottom: 0px;
+   overflow: auto;
+}
+
+
+
+
