@@ -1,4 +1,7 @@
 /* Base Application Styles */
+html{
+  font-size:10px;
+}
 body {
   color: black;
   background: white;
