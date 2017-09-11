@@ -16,14 +16,14 @@
 let type=window.location.host.indexOf("www.52mlsz.com")>=0?0:1;
 
 const config={
-    api:'http://djy.szcid.cn/',
+    api:'www.kurting.cn:8000',
     appid:'wx90814568da5f6843',
     login:'user/login'
 }
 
 
 const devConfig={
-    api:'http://test.52mlsz.com:96/',
+    api:'www.kurting.cn:8000',
     appid:'wxbdeb4ad23f222b7e',
     login:'user/testLogin'
 }
